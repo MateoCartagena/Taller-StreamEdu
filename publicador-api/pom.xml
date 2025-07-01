@@ -1,0 +1,69 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"  
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0  
+         http://maven.apache.org/xsd/maven-4.0.0.xsd"> 
+    <modelVersion>4.0.0</modelVersion> 
+    <groupId>com.ejemplo.camel</groupId> 
+    <artifactId>camel-pubsub-lab</artifactId> 
+    <version>1.0-SNAPSHOT</version> 
+    <packaging>jar</packaging> 
+    <properties> 
+        <camel.version>3.20.2</camel.version> 
+        <spring-boot.version>2.7.15</spring-boot.version> 
+        <java.version>11</java.version> 
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties> 
+<dependencies> 
+    <!-- Camel Core --> 
+    <dependency> 
+        <groupId>org.apache.camel.springboot</groupId> 
+        <artifactId>camel-spring-boot-starter</artifactId> 
+        <version>${camel.version}</version> 
+    </dependency> 
+
+    <!-- RabbitMQ Component --> 
+    <dependency> 
+        <groupId>org.apache.camel.springboot</groupId> 
+        <artifactId>camel-rabbitmq-starter</artifactId> 
+        <version>${camel.version}</version> 
+    </dependency> 
+
+    <!-- Jackson Support -->
+    <dependency>
+        <groupId>org.apache.camel.springboot</groupId>
+        <artifactId>camel-jackson-starter</artifactId>
+        <version>${camel.version}</version>
+    </dependency>
+
+    <!-- Spring Boot Starter --> 
+    <dependency> 
+        <groupId>org.springframework.boot</groupId> 
+        <artifactId>spring-boot-starter</artifactId> 
+        <version>${spring-boot.version}</version> 
+    </dependency> 
+
+    <!-- Web support -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <version>${spring-boot.version}</version>
+    </dependency>
+
+    <!-- JUnit for testing -->
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.10.0</version>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
+    <build> 
+        <plugins> 
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
+            </plugin> 
+        </plugins> 
+    </build> 
+</project>
