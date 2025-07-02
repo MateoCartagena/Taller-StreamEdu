@@ -68,10 +68,10 @@ A continuación se muestra la evidencia del sistema en ejecución.
 
 ### Suscriptores Recibiendo y Procesando el Mensaje
 
-####  servicio-notificaciones
+*  servicio-notificaciones
 ![](img/notificaciones-mensaje.png)
 ![](img/notificaciones-procesamiento.png)
 
-####  servicio-plagio
+*  servicio-plagio
 ![](img/plagio-mensaje.png)
 ![](img/plagio-procesamiento.png)
