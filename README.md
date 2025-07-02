@@ -57,6 +57,7 @@ Usa `curl` o una herramienta como Postman para enviar una tarea a la API del pub
 ```bash
 curl -X POST http://localhost:8081/subir-tarea -H "Content-Type: application/json" -d "{\"estudiante\": \"Juan Perez\", \"curso\": \"Integración de Sistemas\", \"archivo\": \"tarea1.docx\", \"fechaEnvio\": \"2025-06-13T14:22:00\"}"
 ```
+![](img/curl.png)
 
 ---
 
@@ -65,7 +66,7 @@ curl -X POST http://localhost:8081/subir-tarea -H "Content-Type: application/jso
 A continuación se muestra la evidencia del sistema en ejecución.
 
 ### Publicador Enviando Mensaje 
-![](img/overviewRabbit.png)
+![](img/publicador.png)
 
 ### Suscriptores Recibiendo y Procesando el Mensaje
 
