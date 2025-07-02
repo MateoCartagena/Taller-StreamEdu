@@ -26,7 +26,8 @@ docker run -d --hostname my-rabbit --name rabbit-pubsub \  -p 5672:5672 -p 15672
 ```
 Luego, accede a `http://localhost:15672` (user: `guest`, pass: `guest`), ve a la pestaña **Exchanges** y crea manualmente un exchange de tipo **`fanout`** llamado **`entregas.tareas`**.
 
-
+![](img/crear-exchange.png)
+![](img/exchange.png)
 
 ### Paso 2: Ejecutar los Servicios
 Abre **tres terminales separadas**, una para cada servicio.
