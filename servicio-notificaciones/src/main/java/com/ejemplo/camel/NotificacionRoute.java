@@ -19,6 +19,9 @@ public class NotificacionRoute extends RouteBuilder {
              + "&queue=notificaciones.queue"     
              + "&autoDelete=false")
             .routeId("servicio-notificaciones")
+
+            .log("[Servicio de Notificacion] Recibiendo tarea para notificacion")          
+
             .process(new Processor() {
                 @Override
                 public void process(Exchange exchange) throws Exception {

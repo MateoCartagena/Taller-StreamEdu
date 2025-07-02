@@ -19,6 +19,9 @@ public class PlagioRoute extends RouteBuilder {
              + "&queue=plagio.queue"            
              + "&autoDelete=false")
             .routeId("servicio-plagio")
+
+            .log("[Servicio de Plagio] Recibiendo tarea para analisis de plagio")
+
             .process(new Processor() {
                 @Override
                 public void process(Exchange exchange) throws Exception {
