@@ -35,6 +35,8 @@ docker run -d --hostname my-rabbit --name rabbit-pubsub \
   -p 5672:5672 -p 15672:15672 \
   rabbitmq:3-management
 ```
+> 🖼️ Referencias visuales:
+- ![](img/rabbit-docker.png)
 
 📍 Luego, accede a `http://localhost:15672` con las credenciales:
 
@@ -48,7 +50,6 @@ entregas.tareas
 ```
 
 > 🖼️ Referencias visuales:
-- ![](img/rabbit-docker.png)
 - ![](img/crear-exchange.png)
 - ![](img/exchange.png)
 
