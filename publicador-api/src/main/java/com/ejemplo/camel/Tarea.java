@@ -6,11 +6,11 @@ public class Tarea {
     private String archivo;
     private String fechaEnvio;
 
-    // Constructor vacío (buena práctica para DTOs)
+    
     public Tarea() {
     }
 
-    // Getters y Setters
+    
     public String getEstudiante() {
         return estudiante;
     }
@@ -43,7 +43,7 @@ public class Tarea {
         this.fechaEnvio = fechaEnvio;
     }
 
-    // Opcional: un método toString() para facilitar la depuración
+    
     @Override
     public String toString() {
         return "Tarea{" +

@@ -14,9 +14,9 @@ public class PlagioRoute extends RouteBuilder {
     
     @Override
     public void configure() {
-        from("rabbitmq:entregas.tareas"         // Nombre del Exchange 
-             + "?exchangeType=fanout"           // Tipo Fanout 
-             + "&queue=plagio.queue"            // Nombre de queue exclusivo para este servicio [cite: 8]
+        from("rabbitmq:entregas.tareas"          
+             + "?exchangeType=fanout"            
+             + "&queue=plagio.queue"            
              + "&autoDelete=false")
             .routeId("servicio-plagio")
             .process(new Processor() {
@@ -32,6 +32,6 @@ public class PlagioRoute extends RouteBuilder {
                     }
                 }
             })
-            .log("🔍 [Servicio de Plagio] Iniciando análisis de plagio para el estudiante: ${header.estudiante}");
+            .log("[Servicio de Plagio] Iniciando analisis de plagio para el estudiante: ${header.estudiante}");
     }
 }

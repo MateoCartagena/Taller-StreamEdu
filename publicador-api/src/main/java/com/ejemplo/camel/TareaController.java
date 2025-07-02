@@ -16,7 +16,7 @@ public class TareaController {
 
     @PostMapping("/subir-tarea")
     public ResponseEntity<String> subirTarea(@RequestBody Tarea tarea) {
-        // Envía el objeto de la tarea a la ruta de Camel para su procesamiento
+       
         producerTemplate.sendBody("direct:publicarTarea", tarea);
         return ResponseEntity.ok("Tarea recibida y enviada para procesamiento.");
     }

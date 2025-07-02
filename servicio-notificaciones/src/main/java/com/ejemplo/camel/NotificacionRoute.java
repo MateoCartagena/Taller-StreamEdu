@@ -14,9 +14,9 @@ public class NotificacionRoute extends RouteBuilder {
     
     @Override
     public void configure() {
-        from("rabbitmq:entregas.tareas"          // Nombre del Exchange 
-             + "?exchangeType=fanout"            // Tipo Fanout 
-             + "&queue=notificaciones.queue"     // Nombre de queue exclusivo para este servicio
+        from("rabbitmq:entregas.tareas"           
+             + "?exchangeType=fanout"             
+             + "&queue=notificaciones.queue"     
              + "&autoDelete=false")
             .routeId("servicio-notificaciones")
             .process(new Processor() {
@@ -32,6 +32,6 @@ public class NotificacionRoute extends RouteBuilder {
                     }
                 }
             })
-            .log("🔔 [Servicio de Notificación] Notificación enviada para la tarea del estudiante: ${header.estudiante}");
+            .log("[Servicio de Notificacion] Notificacion enviada para la tarea del estudiante: ${header.estudiante}");
     }
 }
